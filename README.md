@@ -19,3 +19,10 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+nx g @nrwl/angular:library home-play --directory home/feature --simpleModuleName
+nx g @nrwl/angular:component home-play --project=home-feature-home-play
+
+npx nx generate @nrwl/angular:setup-tailwind play
+
+nx g @nrwl/angular:library data-access --directory employees

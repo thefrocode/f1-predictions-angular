@@ -1,0 +1,34 @@
+$faded: rgba(0, 0, 0, 0.7);
+$size: 32px;
+
+:host {
+  grid-area: top-bar;
+  z-index: 1;
+  @apply px-8 py-4 w-full flex justify-between items-center h-topBar bg-secondary border-b-2 border-[#fdf0d5];
+}
+
+.arrow-button {
+  border: none;
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  background-color: $faded;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+b {
+  font-weight: 900;
+  margin: 15px;
+}
+.logo {
+  font-size: 20px;
+  color: #ffffff;
+  float: left;
+  text-transform: uppercase;
+  font-family: "Open Sans",sans-serif;  
+
+}

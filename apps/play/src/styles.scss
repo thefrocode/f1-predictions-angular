@@ -1,1 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  min-width: 600px;
+  line-height: 20px;
+  letter-spacing: 0.015em;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  font-size: 14px;
+  line-height: 1.42857;
+  @apply h-full w-full absolute overflow-hidden flex flex-col;
+}
+
+.page_content {
+  background: #ffffff;
+  height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px 20px 10px 25px;
+}
+.title_and_buttons_section {
+  padding: 10px 0;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+}
+.title {
+  float: left;
+  font-weight: 700 !important;
+  font-size: 18px;
+  padding: 5px 0;
+}
+.actions {
+  float: right;
+}
+.datatables_section {
+  @apply my-2;
+}
+@layer components {
+  .input-box {
+    @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+  }
+  .input-box:focus {
+    @apply outline-none;
+  }
+  .buttons_red {
+    @apply px-3 py-2 my-2 rounded-md bg-secondary text-white;
+  }
+  .buttons_red:disabled {
+    @apply opacity-50;
+  }
+  .buttons_blue {
+    @apply px-3 py-2 my-2 rounded-md bg-primary text-white;
+  }
+  .buttons_blue:disabled {
+    @apply opacity-50;
+  }
+}
+
+.card_content {
+  border: #b3b3b3;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+    0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  //border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0f7173;
+  //border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0f7173;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.my-css-class .mat-dialog-container {
+  /* add your styles */
+  @apply bg-white;
+}

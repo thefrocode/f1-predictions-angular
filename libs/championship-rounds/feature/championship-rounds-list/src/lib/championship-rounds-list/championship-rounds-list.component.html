@@ -1,0 +1,4 @@
+<select #round (change)="onChange(round.value)">
+    
+    <option *ngFor="let round of rounds$ | async" value="{{round.id}}">{{round.name}}</option>
+</select>

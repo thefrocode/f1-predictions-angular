@@ -1,0 +1,17 @@
+<div
+  *ngIf="points$ | async as playerPoints"
+  class="flex flex-row justify-center p-6 bg-white border border-gray-200 rounded-lg shadow"
+>
+  <div class="flex flex-col w-1/2 items-center">
+    <div>Total Points</div>
+    <div class="text-bold">{{ playerPoints.totalPoints }}</div>
+  </div>
+  <div class="flex flex-col w-1/2 items-center">
+    <p>Round Points</p>
+    <p>{{ playerPoints.roundPoints }}</p>
+  </div>
+
+  <!-- <ng-template #noPoints>
+    <div>Loading ...</div>
+  </ng-template> -->
+</div>

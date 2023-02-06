@@ -1,0 +1,99 @@
+<div>
+    <form [formGroup]="predictionsForm">
+        <div class="flex flex-col m-3">
+            <div>
+                <label>P1</label>
+            
+                
+                <select (change)="selectDriver($event, 0)" formControlName="p1">
+                    <option>Select P1</option>
+                    <option *ngFor="let driver of availableDrivers" [value]="driver.id"
+                    [hidden]="driver.selected">
+                        {{ driver.name }}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <label>P2</label>
+                <select (change)="selectDriver($event, 1)" formControlName="p2">
+                    <option>Select P2</option>
+                    <option *ngFor="let driver of availableDrivers" [value]="driver.id"
+                    [hidden]="driver.selected">
+                        {{ driver.name }}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <label>P3</label>
+                <select (change)="selectDriver($event, 2)" formControlName="p3">
+                    <option>Select P1</option>
+                    <option *ngFor="let driver of availableDrivers" [value]="driver.id"
+                    [hidden]="driver.selected">
+                        {{ driver.name }}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <label>P4</label>
+                <select (change)="selectDriver($event, 3)" formControlName="p4">
+                    <option>Select P1</option>
+                    <option *ngFor="let driver of availableDrivers" [value]="driver.id"
+                    [hidden]="driver.selected">
+                        {{ driver.name }}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <label>P5</label>
+                <select (change)="selectDriver($event, 4)" formControlName="p5">
+                    <option>Select P5</option>
+                    <option *ngFor="let driver of availableDrivers" [value]="driver.id"
+                    [hidden]="driver.selected">
+                        {{ driver.name }}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <label>Pole Position</label>
+                <select formControlName="pole_position">
+                    <option>Select Pole position</option>
+                    <option *ngFor="let driver of drivers" [value]="driver.id">
+                        {{ driver.name }}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <label>Fastest Lap</label>
+                <select formControlName="fastest_lap">
+                    <option>Select Fastest Lap</option>
+                    <option *ngFor="let driver of drivers" [value]="driver.id">
+                        {{ driver.name }}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <label>Driver of the day</label>
+                <select formControlName="driver_of_the day">
+                    <option>Select Sriver of the day</option>
+                    <option *ngFor="let driver of drivers" [value]="driver.id">
+                        {{ driver.name }}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <label>Highest Overtakes</label>
+                <select formControlName="highest_overtakes">
+                    <option>Select Highest Overtakes</option>
+                    <option *ngFor="let driver of drivers" [value]="driver.id">
+                        {{ driver.name }}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <button type="submit" (click)="submitForm()">Submit</button>
+        </div>
+        
+        
+    </form>
+</div>

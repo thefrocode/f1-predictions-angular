@@ -14,7 +14,74 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@f1-predictions-angular/championship-rounds/data-access": [
+        "libs/championship-rounds/data-access/src/index.ts"
+      ],
+      "@f1-predictions-angular/championship-rounds/feature/championship-rounds-list": [
+        "libs/championship-rounds/feature/championship-rounds-list/src/index.ts"
+      ],
+      "@f1-predictions-angular/championship-rounds/feature/championship-rounds-shell": [
+        "libs/championship-rounds/feature/championship-rounds-shell/src/index.ts"
+      ],
+      "@f1-predictions-angular/drivers/data-access": [
+        "libs/drivers/data-access/src/index.ts"
+      ],
+      "@f1-predictions-angular/drivers/feature/drivers-list": [
+        "libs/drivers/feature/drivers-list/src/index.ts"
+      ],
+      "@f1-predictions-angular/drivers/feature/drivers-shell": [
+        "libs/drivers/feature/drivers-shell/src/index.ts"
+      ],
+      "@f1-predictions-angular/home/feature/home-play": [
+        "libs/home/feature/home-play/src/index.ts"
+      ],
+      "@f1-predictions-angular/home/feature/home-shell": [
+        "libs/home/feature/home-shell/src/index.ts"
+      ],
+      "@f1-predictions-angular/results/data-access": [
+        "libs/results/data-access/src/index.ts"
+      ],
+      "@f1-predictions-angular/results/feature/leaderboard": [
+        "libs/results/feature/leaderboard/src/index.ts"
+      ],
+      "@f1-predictions-angular/results/feature/points": [
+        "libs/results/feature/points/src/index.ts"
+      ],
+      "@f1-predictions-angular/results/feature/predictions": [
+        "libs/results/feature/predictions/src/index.ts"
+      ],
+      "@f1-predictions-angular/results/feature/results-shell": [
+        "libs/results/feature/results-shell/src/index.ts"
+      ],
+      "@f1-predictions-angular/results/ui/predictions-form": [
+        "libs/results/ui/predictions-form/src/index.ts"
+      ],
+      "@f1-predictions-angular/shared/app-config": [
+        "libs/shared/app-config/src/index.ts"
+      ],
+      "@f1-predictions-angular/shared/data-access/f1-predictions-api": [
+        "libs/shared/data-access/f1-predictions-api/src/index.ts"
+      ],
+      "@f1-predictions-angular/shared/data-access/models": [
+        "libs/shared/data-access/models/src/index.ts"
+      ],
+      "@f1-predictions-angular/shared/data-access/store": [
+        "libs/shared/data-access/store/src/index.ts"
+      ],
+      "@f1-predictions-angular/shell/feature/web-shell": [
+        "libs/shell/feature/web-shell/src/index.ts"
+      ],
+      "@f1-predictions-angular/shell/ui/layout": [
+        "libs/shell/ui/layout/src/index.ts"
+      ],
+      "@f1-predictions-angular/shell/ui/mainview": [
+        "libs/shell/ui/mainview/src/index.ts"
+      ],
+      "@f1-predictions-angular/shell/ui/topbar": [
+        "libs/shell/ui/topbar/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
