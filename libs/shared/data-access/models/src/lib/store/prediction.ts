@@ -1,6 +1,6 @@
 export interface Prediction{
     round_id: number | null;
-    player_id: number;
+    player_id: number | null;
     p1: number;
     p2: number;
     p3: number;

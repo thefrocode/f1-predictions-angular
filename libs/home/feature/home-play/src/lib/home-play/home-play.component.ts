@@ -3,6 +3,7 @@ import { initChampionshipRounds } from '@f1-predictions-angular/championship-rou
 import { Store } from '@ngrx/store';
 import { initLeaderboard, initPoints, initPrediction } from '@f1-predictions-angular/results/data-access'
 import { initDrivers } from '@f1-predictions-angular/drivers/data-access';
+//import { BACKGROUND } from '@f1-predictions-angular/shared/assets';
 
 @Component({
   selector: 'f1-predictions-angular-home-play',
@@ -11,6 +12,7 @@ import { initDrivers } from '@f1-predictions-angular/drivers/data-access';
 })
 export class HomePlayComponent implements OnInit{
 
+  //background = BACKGROUND;
   constructor (private store: Store){
 
   }

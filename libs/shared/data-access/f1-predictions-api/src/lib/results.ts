@@ -8,8 +8,8 @@ export class ResultApiService {
 
     constructor(@Inject(APP_CONFIG) private appConfig: AppConfig, private http: HttpClient) {}
 
-    getPoints(player_id: number, round_id: number): Observable<Points>{
-        return this.http.get<Points>(`${this.appConfig.baseURL}/results/points/${player_id}/${round_id}`)
+    getPoints(round_id: number,player_id: number| null,): Observable<Points>{
+        return this.http.get<Points>(`${this.appConfig.baseURL}/results/points/${round_id}/${player_id}`)
     }
 
     getLeaderboard(): Observable<LeaderBoard[]>{

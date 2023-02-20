@@ -11,7 +11,7 @@ export class PredictionApiService {
     makePrediction(prediction: Prediction): Observable<Prediction>{
         return this.http.post<Prediction>(`${this.appConfig.baseURL}/predictions`,prediction)
     }
-    getPrediction(round_id: number, player_id:number): Observable<Prediction>{
+    getPrediction(round_id: number, player_id:number | null): Observable<Prediction>{
         return this.http.get<Prediction>(`${this.appConfig.baseURL}/predictions/${round_id}/${player_id}`)
     }
 

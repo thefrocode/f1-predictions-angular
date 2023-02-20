@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@f1-predictions-angular/auth/data-access": [
+        "libs/auth/data-access/src/index.ts"
+      ],
+      "@f1-predictions-angular/auth/feature/signin": [
+        "libs/auth/feature/signin/src/index.ts"
+      ],
       "@f1-predictions-angular/championship-rounds/data-access": [
         "libs/championship-rounds/data-access/src/index.ts"
       ],
@@ -60,6 +66,9 @@
       "@f1-predictions-angular/shared/app-config": [
         "libs/shared/app-config/src/index.ts"
       ],
+      "@f1-predictions-angular/shared/assets": [
+        "libs/shared/assets/src/index.ts"
+      ],
       "@f1-predictions-angular/shared/data-access/f1-predictions-api": [
         "libs/shared/data-access/f1-predictions-api/src/index.ts"
       ],
@@ -68,6 +77,12 @@
       ],
       "@f1-predictions-angular/shared/data-access/store": [
         "libs/shared/data-access/store/src/index.ts"
+      ],
+      "@f1-predictions-angular/shared/ui/dialogs/error-dialog": [
+        "libs/shared/ui/dialogs/error-dialog/src/index.ts"
+      ],
+      "@f1-predictions-angular/shared/ui/dialogs/success-dialog": [
+        "libs/shared/ui/dialogs/success-dialog/src/index.ts"
       ],
       "@f1-predictions-angular/shell/feature/web-shell": [
         "libs/shell/feature/web-shell/src/index.ts"

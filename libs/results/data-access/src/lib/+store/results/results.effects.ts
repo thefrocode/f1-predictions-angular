@@ -8,7 +8,9 @@ import { switchMap, catchError, of, map, withLatestFrom, mergeMap } from 'rxjs';
 import { PredictionApiService, ResultApiService } from '@f1-predictions-angular/shared/data-access/f1-predictions-api';
 import { selectSelectedRoundId } from '@f1-predictions-angular/championship-rounds/data-access';
 import { Store } from '@ngrx/store';
-
+import { MatDialog } from '@angular/material/dialog';
+import { SuccessDialogComponent } from '@f1-predictions-angular/shared/ui/dialogs/success-dialog'
+import { getPlayerId } from '@f1-predictions-angular/auth/data-access';
 @Injectable()
 export class ResultsEffects {
   private actions$ = inject(Actions);
@@ -26,9 +28,14 @@ export class ResultsEffects {
   initPoints$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(ResultsActions.initPoints),
-      switchMap(() => {
-        return this.resultApiService.getPoints(1, 1).pipe(
+      withLatestFrom(this.store.select(getPlayerId),
+      (action, player_id) => {
+        return { action, player_id };
+      }),
+      switchMap((action) => {
+        return this.resultApiService.getPoints(1, action.player_id).pipe(
           map((points) => {
+            
             return ResultsActions.loadPointsSuccess({
               points: points,
             });
@@ -67,11 +74,15 @@ export class ResultsEffects {
       (action, round) => {
         return { action, round };
       }),
-      switchMap((action, round) => {
+      withLatestFrom(this.store.select(getPlayerId),
+      (action, player_id) => {
+        return { action, player_id };
+      }),
+      switchMap((action) => {
         const updatedPrediction = {
-          ...action.action.prediction,
+          ...action.action.action.prediction,
           round_id: 2,
-          player_id: 3
+          player_id: action.player_id
         }
         return this.predictionApiService.makePrediction(updatedPrediction).pipe(
           map((prediction) => {
@@ -91,7 +102,9 @@ export class ResultsEffects {
         });
         return dialogRef.afterClosed();
       })
-    )
+    ),{
+      dispatch: false
+    }
   )
   getPrediction$ = createEffect(() => 
     this.actions$.pipe(
@@ -100,9 +113,13 @@ export class ResultsEffects {
       (action, round) => {
         return { action, round };
       }),
-      switchMap((action, round_id) => {
+      withLatestFrom(this.store.select(getPlayerId),
+      (action, player_id) => {
+        return { action, player_id };
+      }),
+      switchMap((action) => {
         
-        return this.predictionApiService.getPrediction(2,3).pipe(
+        return this.predictionApiService.getPrediction(2,action.player_id).pipe(
           map((prediction) => {
             return ResultsActions.getPredictionSuccess({
               prediction: prediction

@@ -1,3 +1,8 @@
-<div *ngFor="let player of leaderboard$ | async">
-    <p>{{player.name}} | {{player.points}}</p>
+<div class="text-center m-2 text-2xl font-bold text-orange-400">Leaderboard</div>
+<div class="player" *ngFor="let player of leaderboard$ | async">
+    <div class="flex w-full m-1 ">
+        <p class="flex justify-start w-3/4">{{player.name}}</p>
+        <p class="flex justify-end w-1/4 font-bold text-lg text-orange-400">{{player.points}}</p>
+        
+    </div>
 </div>

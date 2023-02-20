@@ -12,13 +12,10 @@ import {
   Driver,
   Prediction,
 } from '@f1-predictions-angular/shared/data-access/models';
-import {
-  initDrivers,
-  selectAllDrivers,
-} from '@f1-predictions-angular/drivers/data-access';
-import { Subscription } from 'rxjs';
+
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { threadId } from 'worker_threads';
+
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
@@ -35,6 +32,8 @@ export class PredictionsFormComponent implements OnInit {
   @Input() prediction!: Prediction | null;
   @Input() drivers!: Driver[] | null;
   @Output() submitPrediction = new EventEmitter<Prediction>();
+
+  faPlusCircle = faPlusCircle;
 
   constructor(
     private store: Store,

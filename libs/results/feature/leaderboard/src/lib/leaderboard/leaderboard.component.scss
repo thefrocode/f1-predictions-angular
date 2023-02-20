@@ -1,0 +1,10 @@
+:host{
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+    @apply rounded-lg w-9/12 divide-y divide-gray-50;
+
+}
+.player{
+    @apply flex flex-col items-center justify-center p-2 mx-6  ;
+}

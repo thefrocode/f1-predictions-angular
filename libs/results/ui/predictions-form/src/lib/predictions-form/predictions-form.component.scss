@@ -1,0 +1,9 @@
+:host{
+    @apply my-4
+}
+.prediction{
+   @apply flex flex-row bg-orange-500 mx-4 my-1 p-1 opacity-90 items-center rounded-lg;
+}
+fa-icon {
+    font-size: 32px;
+  }

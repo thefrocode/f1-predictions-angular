@@ -26,3 +26,9 @@ nx g @nrwl/angular:component home-play --project=home-feature-home-play
 npx nx generate @nrwl/angular:setup-tailwind play
 
 nx g @nrwl/angular:library data-access --directory employees
+
+476799260721-idi0ntt8qn9r6btle741unocliq9b48m.apps.googleusercontent.com
+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
+
+
+

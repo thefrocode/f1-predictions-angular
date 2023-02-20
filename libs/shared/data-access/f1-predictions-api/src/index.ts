@@ -3,3 +3,4 @@ export * from './lib/championship-rounds';
 export * from './lib/results'
 export * from './lib/drivers'
 export * from './lib/predictions'
+export * from './lib/auth-api'
